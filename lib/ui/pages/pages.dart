@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:inventory/controllers/controllers.dart';
+import 'package:inventory/main.dart';
+import 'package:inventory/models/models.dart';
+import 'package:inventory/ui/widgets/bot_toast.dart';
+import 'package:inventory/ui/widgets/custom_navbar.dart';
+import 'package:table_calendar/table_calendar.dart';
+
+part 'main_page.dart';
+part 'beranda_page.dart';
+part 'profile_page.dart';
+part 'notif_page.dart';
+part 'stock_page.dart';
+part 'form_goods_page.dart';
+part 'form_branch_page.dart';
+part 'stock_update_page.dart';
+part 'demand_page.dart';
+part 'branch_page.dart';
+part 'update_password_page.dart';
+part 'opname_page.dart';
+part 'opname_result_page.dart';
+part 'demand_report_page.dart';
+part 'demand_detail_page.dart';
+part 'approved_page.dart';
+
+var formatter = DateFormat("yyyy-MM-dd");
+final kToday = DateTime.now();
+final kFirstDay = DateTime(kToday.year, kToday.month - 3, kToday.day);
+final kLastDay = DateTime(kToday.year, kToday.month + 3, kToday.day);
+Widget loadingMinIndicator = SpinKitThreeBounce(color: Colors.blue, size: 16);
