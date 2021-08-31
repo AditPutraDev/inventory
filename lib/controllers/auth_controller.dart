@@ -10,6 +10,7 @@ class AuthController extends GetxController {
   RxList<User> listUser = <User>[].obs;
 
   var isLoading = false.obs;
+  RxBool secureText = true.obs;
   var siluet =
       'https://w7.pngwing.com/pngs/267/604/png-transparent-computer-icons-avatar-employees-icon-silhouette-user-shoulder.png';
   var background =
@@ -19,6 +20,10 @@ class AuthController extends GetxController {
   void onInit() {
     getUser();
     super.onInit();
+  }
+
+  showHide() {
+    secureText.toggle();
   }
 
   void getUser() {
